@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from 'next/image'
 
 interface NavItem {
   name: string;
@@ -38,19 +39,26 @@ export function Header() {
   ];
 
   return (
-    <header className="bg-[#F5F7FA] py-2 shadow-md fixed w-full z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+    <header className="bg-[#F5F7FA] py-2 shadow-md fixed w-full z-50 h-24">
+      <div className="container mx-auto px-4 flex justify-between items-center h-full">
         {/* Logo Section */}
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-[#2B6CB0] rounded-full flex items-center justify-center text-white font-bold">
-            ♔
+        <Link href="/" className="flex items-center justify-center space-x-5">
+          <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center">
+            <Image src="/logo.jpeg" alt="Telangana Chess Academy Logo" width={64} height={64} />
           </div>
-          <div>
-            <h1 className="text-lg font-bold text-[#2D3748]">Telangana Chess Academy</h1>
-            {/* <p className="text-sm text-[#2D3748]">Master the Game of Kings</p> */}
+          <div className="leading-tight">
+            <span
+              className="block text-xl font-bold tracking-wide bg-gradient-to-r from-[#2B6CB0] via-[#4299E1] to-[#F56565] bg-clip-text text-transparent"
+            >
+              Telangana Chess
+            </span>
+            <span
+              className="block text-base font-semibold tracking-wider bg-gradient-to-r from-[#F56565] via-[#ED64A6] to-[#2B6CB0] bg-clip-text text-transparent"
+            >
+              Academy
+            </span>
           </div>
         </Link>
-
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-4">
           {navItems.map((item) => (
@@ -95,7 +103,7 @@ export function Header() {
 
         {/* Desktop Contact and Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
-          <div className="text-[#2D3748] text-sm">+91-9864646481</div>
+          <div className="text-[#2D3748] text-sm">+919864646481</div>
           <Button className="bg-[#2B6CB0] hover:bg-[#2C5282] text-white px-4 py-2 rounded-full">
             Join Now
           </Button>
