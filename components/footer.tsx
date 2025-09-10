@@ -11,7 +11,7 @@ import {
 
 export function Footer() {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Facebook, href: "https://www.facebook.com/telanganachessacademy", label: "Facebook" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Youtube, href: "#", label: "YouTube" },
@@ -89,7 +89,7 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-white/80 mt-0.5" />
                 <div>
-                  <p className="text-white text-sm">info@telanganachessacademy.com</p>
+                  <p className="text-white text-sm">telanganachessacademy@gmail.com</p>
                   <p className="text-white/70 text-xs">We'll respond within 24 hours</p>
                 </div>
               </div>

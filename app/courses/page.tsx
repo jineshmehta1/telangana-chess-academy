@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,9 +15,18 @@ import {
 } from "lucide-react";
 
 export default function CoursesPage() {
+  const [expandedCourses, setExpandedCourses] = useState<{ [key: number]: boolean }>({});
+
+  const toggleFeatures = (index: number) => {
+    setExpandedCourses((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+
   const courses = [
     {
-      title: "Beginner's Foundation",
+      title: "Beginner Level –1",
       level: "Beginner",
       duration: "3 Months",
       price: "₹5,000",
@@ -23,21 +34,51 @@ export default function CoursesPage() {
       rating: "4.9",
       icon: BookOpen,
       color: "from-[#2B6CB0] to-[#9F7AEA]",
-      description: "Perfect for complete beginners who want to learn chess from scratch.",
+      description: "Perfect for complete beginners starting their chess journey.",
       features: [
-        "Basic rules and piece movements",
-        "Fundamental tactics and strategies",
-        "Opening principles",
-        "Basic endgames",
-        "Chess notation",
-        "Practice games with guidance",
+        "Introduction to Chess",
+        "Chess Board setup and Name of Pieces",
+        "Initial Position of pieces",
+        "Movement of Pieces",
+        "Value of Pieces",
+        "Rules",
+        "Capture and Exchange",
+        "Files, Ranks, Diagonals, Center",
+        "Checkmate and Stalemate",
+        "Special Rules – Castling, Pawn Promotion, and En Passant",
       ],
       schedule: "2 classes per week (1.5 hours each)",
       ageGroup: "6+ years",
       classSize: "8-10 students",
     },
     {
-      title: "Intermediate Mastery",
+      title: "Beginner Level –2",
+      level: "Beginner",
+      duration: "3 Months",
+      price: "₹5,000",
+      students: "45+",
+      rating: "4.8",
+      icon: BookOpen,
+      color: "from-[#2B6CB0] to-[#9F7AEA]",
+      description: "Builds on basics with focus on checkmates and simple tactics.",
+      features: [
+        "Elementary Checkmates",
+        "King + Queen Vs King",
+        "King + 2 Rooks Vs King",
+        "King + Rook Vs King",
+        "King + 2 Bishops Vs King",
+        "Check Combination",
+        "Checkmate in 1 move",
+        "Checkmate in 2 move",
+        "Pin (basic)",
+        "Fork (basic)",
+      ],
+      schedule: "2 classes per week (1.5 hours each)",
+      ageGroup: "6+ years",
+      classSize: "8-10 students",
+    },
+    {
+      title: "Intermediate Level –1",
       level: "Intermediate",
       duration: "4 Months",
       price: "₹8,000",
@@ -45,22 +86,100 @@ export default function CoursesPage() {
       rating: "4.8",
       icon: Target,
       color: "from-[#48BB78] to-[#38A169]",
-      description:
-        "For players who know the basics and want to improve their game significantly.",
+      description: "Introduces intermediate players to advanced tactics.",
       features: [
-        "Advanced tactical patterns",
-        "Opening repertoire development",
-        "Middlegame planning",
-        "Endgame techniques",
-        "Tournament preparation",
-        "Positional understanding",
+        "Pin",
+        "Absolute Pin",
+        "Relative Pin",
+        "Fork",
+        "Checkmate in 3 moves",
+        "Checkmate in 4 moves",
+        "Double Attack",
+        "Discovered Check",
       ],
       schedule: "3 classes per week (2 hours each)",
       ageGroup: "8+ years",
       classSize: "6-8 students",
     },
     {
-      title: "Advanced Competition",
+      title: "Intermediate Level –2",
+      level: "Intermediate",
+      duration: "4 Months",
+      price: "₹8,000",
+      students: "40+",
+      rating: "4.8",
+      icon: Target,
+      color: "from-[#48BB78] to-[#38A169]",
+      description: "Focuses on opening basics and tactical patterns.",
+      features: [
+        "Opening Basics",
+        "Center control",
+        "Development of pieces",
+        "Placing piece on good squares",
+        "Coordination of pieces",
+        "Opening – Giuoco Piano (King Pawn Opening)",
+        "Checkmate in 3 moves",
+        "Checkmate in 4 moves",
+        "Double Attack",
+        "Discovered Check",
+      ],
+      schedule: "3 classes per week (2 hours each)",
+      ageGroup: "8+ years",
+      classSize: "6-8 students",
+    },
+    {
+      title: "Intermediate Level –3",
+      level: "Intermediate",
+      duration: "4 Months",
+      price: "₹8,000",
+      students: "35+",
+      rating: "4.8",
+      icon: Target,
+      color: "from-[#48BB78] to-[#38A169]",
+      description: "Deepens tactical understanding with complex motifs.",
+      features: [
+        "Discovered Attack",
+        "Decoy",
+        "X – ray",
+        "Attraction",
+        "Interference",
+        "Over worked piece",
+      ],
+      schedule: "3 classes per week (2 hours each)",
+      ageGroup: "8+ years",
+      classSize: "6-8 students",
+    },
+    {
+      title: "Intermediate Level –4",
+      level: "Intermediate",
+      duration: "4 Months",
+      price: "₹8,000",
+      students: "35+",
+      rating: "4.8",
+      icon: Target,
+      color: "from-[#48BB78] to-[#38A169]",
+      description: "Covers opening preparation and pawn structures.",
+      features: [
+        "Opening",
+        "Preparing an Opening repertoire according to need of Intermediate level",
+        "Open files and Diagonals",
+        "Pawn Structure",
+        "Double Pawns",
+        "Isolated Pawn",
+        "Connected Pawns",
+        "Backward Pawn",
+        "Passed Pawn",
+        "Double Check",
+        "Trapped Man",
+        "Zugzwang",
+        "Clearance",
+      ],
+      schedule: "3 classes per week (2 hours each)",
+      ageGroup: "8+ years",
+      classSize: "6-8 students",
+    },
+    {
+      title: "Advanced Level –1",
       level: "Advanced",
       duration: "6 Months",
       price: "₹12,000",
@@ -68,87 +187,60 @@ export default function CoursesPage() {
       rating: "4.9",
       icon: Trophy,
       color: "from-[#9F7AEA] to-[#D53F8C]",
-      description:
-        "Intensive training for serious players aiming for competitive success.",
+      description: "Intensive training for competitive players.",
       features: [
-        "Deep opening preparation",
-        "Complex tactical combinations",
-        "Strategic masterpieces analysis",
-        "Psychological preparation",
-        "Tournament coaching",
-        "Rating improvement focus",
+        "Types of Centre",
+        "Open Centre",
+        "Closed Centre",
+        "Static Centre",
+        "Dynamic Centre",
+        "Pawn Centre",
+        "Pawn Endgames",
+        "Opening Repertoire for Advanced Level player",
+        "Space Advantage",
+        "In depth analysis of Opening lines",
+        "Pawn chain",
+        "Pawn wedge",
+        "Prophylaxis",
+        "Exploiting an Advantage",
+        "Knight Endgames",
+        "Outpost",
+        "Including Pieces into Attack",
+        "Greek gift",
+        "Focal Point g7",
+        "Sacrifice on f7",
+        "Sacrifice on h6",
+        "Rook Lifting",
+        "Bishop Vs Knight",
+        "Initiative",
+        "Manoeuvring",
+        "Positional Sacrifices",
       ],
       schedule: "4 classes per week (2.5 hours each)",
       ageGroup: "12+ years",
       classSize: "4-6 students",
     },
     {
-      title: "Master Class Elite",
+      title: "Advanced Level –2",
       level: "Expert",
-      duration: "12 Months",
-      price: "₹20,000",
-      students: "15+",
-      rating: "5.0",
+      duration: "6 Months",
+      price: "₹12,000",
+      students: "20+",
+      rating: "4.9",
       icon: Crown,
       color: "from-[#F6E05E] to-[#DD6B20]",
-      description: "Elite program for aspiring masters and titled players.",
+      description: "Elite training for aspiring masters with focus on discipline.",
       features: [
-        "Grandmaster-level analysis",
-        "Professional opening preparation",
-        "Advanced endgame mastery",
-        "Tournament strategy",
-        "Mental conditioning",
-        "Individual coaching sessions",
+        "Conditions",
+        "Completing Chess homework on time",
+        "Participation in tournaments as recommended",
+        "Regular attendance",
+        "Regular practice at home",
       ],
-      schedule: "5 classes per week (3 hours each)",
-      ageGroup: "14+ years",
-      classSize: "2-4 students",
-    },
-    {
-      title: "Rapid Chess Specialist",
-      level: "All Levels",
-      duration: "2 Months",
-      price: "₹4,000",
-      students: "30+",
-      rating: "4.7",
-      icon: Zap,
-      color: "from-[#FF69B4] to-[#D53F8C]",
-      description: "Specialized course focusing on rapid and blitz chess formats.",
-      features: [
-        "Time management techniques",
-        "Quick pattern recognition",
-        "Rapid calculation methods",
-        "Blitz strategies",
-        "Online tournament preparation",
-        "Speed training exercises",
-      ],
-      schedule: "2 classes per week (1 hour each)",
-      ageGroup: "10+ years",
-      classSize: "10-12 students",
-    },
-    {
-      title: "Kids Chess Fun",
-      level: "Kids Special",
-      duration: "3 Months",
-      price: "₹3,500",
-      students: "60+",
-      rating: "4.8",
-      icon: Star,
-      color: "from-[#6B46C1] to-[#9F7AEA]",
-      description:
-        "Fun and engaging chess program designed specifically for young children.",
-      features: [
-        "Game-based learning",
-        "Story-telling with chess",
-        "Puzzle solving activities",
-        "Mini tournaments",
-        "Chess art and crafts",
-        "Parent-child sessions",
-      ],
-      schedule: "2 classes per week (1 hour each)",
-      ageGroup: "4-8 years",
-      classSize: "6-8 students",
-    },
+      schedule: "4 classes per week (2.5 hours each)",
+      ageGroup: "12+ years",
+      classSize: "4-6 students",
+    }
   ];
 
   return (
@@ -168,19 +260,17 @@ export default function CoursesPage() {
           </p>
         </div>
       </section>
-
       {/* Course Levels Overview */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-[#2B6CB0] to-[#9F7AEA] bg-clip-text text-transparent">
             Find Your Perfect Level
           </h2>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               { level: "Beginner", description: "New to chess", color: "bg-[#2B6CB0]" },
               { level: "Intermediate", description: "Know the basics", color: "bg-[#48BB78]" },
               { level: "Advanced", description: "Competitive player", color: "bg-[#9F7AEA]" },
-              { level: "Expert", description: "Aspiring master", color: "bg-[#F6E05E]" },
             ].map((level, index) => (
               <Card key={index} className="text-center p-6 border-2 hover:border-[#9F7AEA] transition-all duration-300">
                 <div
@@ -195,7 +285,6 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
-
       {/* Courses Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -206,7 +295,6 @@ export default function CoursesPage() {
                 className="bg-white border-0 shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <div className={`h-2 bg-gradient-to-r ${course.color}`}></div>
-
                 <CardContent className="p-8">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
@@ -228,7 +316,6 @@ export default function CoursesPage() {
                       <div className="text-sm text-gray-500">{course.duration}</div>
                     </div>
                   </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div className="text-center p-3 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
@@ -247,10 +334,8 @@ export default function CoursesPage() {
                       <div className="text-sm font-bold text-green-700">{course.rating}</div>
                     </div>
                   </div>
-
                   {/* Description */}
                   <p className="text-gray-700 mb-6 leading-relaxed">{course.description}</p>
-
                   {/* Course Details */}
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
@@ -277,14 +362,35 @@ export default function CoursesPage() {
                           </div>
                         ))}
                         {course.features.length > 3 && (
-                          <div className="text-sm text-green-600 font-medium">
-                            +{course.features.length - 3} more topics
-                          </div>
+                          <>
+                            {expandedCourses[index] ? (
+                              <>
+                                {course.features.slice(3).map((feature, featureIndex) => (
+                                  <div key={featureIndex + 3} className="flex items-center gap-2">
+                                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                                    <span className="text-sm text-gray-600">{feature}</span>
+                                  </div>
+                                ))}
+                                <button
+                                  className="text-sm text-green-600 font-medium hover:underline"
+                                  onClick={() => toggleFeatures(index)}
+                                >
+                                  Show less
+                                </button>
+                              </>
+                            ) : (
+                              <button
+                                className="text-sm text-green-600 font-medium hover:underline"
+                                onClick={() => toggleFeatures(index)}
+                              >
+                                +{course.features.length - 3} more topics
+                              </button>
+                            )}
+                          </>
                         )}
                       </div>
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex gap-3">
                     <Button className={`flex-1 bg-gradient-to-r ${course.color} hover:opacity-90 text-white`}>
@@ -300,7 +406,6 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
-
       {/* Why Choose Our Courses */}
       <section className="py-16 px-4 bg-gradient-to-br from-green-500 to-emerald-600">
         <div className="max-w-6xl mx-auto text-center">
@@ -337,7 +442,6 @@ export default function CoursesPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">

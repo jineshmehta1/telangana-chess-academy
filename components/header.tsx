@@ -24,14 +24,14 @@ export function Header() {
       href: "/about",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Our Story", href: "/about/story" },
-        { name: "Our Mission", href: "/about/mission" },
-        { name: "Achievements", href: "/about/achievements" },
+        { name: "Our Story", href: "/about/#story" },
+        { name: "Our Mission", href: "/about/#mission" },
+        { name: "Achievements", href: "/about/#achievements" },
       ],
     },
     { name: "Our Courses", href: "/courses" },
     { name: "Our Coaches", href: "/coaches" },
-    { name: "Online Coaching", href: "/online-coaching" },
+    { name: "Online Coaching", href: "https://coaching.telanganachessacademy.com/" },
     { name: "Events", href: "/events" },
     { name: "Gallery", href: "/gallery" },
     { name: "Blogs", href: "/blogs" },
@@ -44,7 +44,7 @@ export function Header() {
         {/* Logo Section */}
         <Link href="/" className="flex items-center justify-center space-x-5">
           <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center">
-            <Image src="/logo.jpeg" alt="Telangana Chess Academy Logo" width={64} height={64} />
+            <Image src="/logo.jpg" alt="Telangana Chess Academy Logo" width={64} height={64} />
           </div>
           <div className="leading-tight">
             <span
@@ -104,10 +104,12 @@ export function Header() {
         {/* Desktop Contact and Buttons */}
         <div className="hidden lg:flex items-center space-x-4">
           <div className="text-[#2D3748] text-sm">+919864646481</div>
-          <Button className="bg-[#2B6CB0] hover:bg-[#2C5282] text-white px-4 py-2 rounded-full">
+          <Link href="/contact">
+          <Button className="bg-[#2B6CB0] hover:bg-[#2C5282] text-white px-4 py-2 rounded-full" >
             Join Now
           </Button>
-          <Link href="/quick-pay">
+          </Link>
+          <Link href="https://pages.razorpay.com/pl_G2wqpnC6qMaDXV/view">
             <Button
               variant="outline"
               className="border-[#F56565] text-[#F56565] hover:bg-[#F56565] hover:text-white px-4 py-2 rounded-full"

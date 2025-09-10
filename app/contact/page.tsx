@@ -37,19 +37,19 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Telangana Chess Academy", "123 Chess Street", "Banjara Hills, Hyderabad", "India"],
+      details: [" 11-13-75 Road No 2, Alkapuri ,Kothapet, Hyderabad-500035, Above Pragathi Model School"],
       color: "from-[#2B6CB0] to-[#9F7AEA]",
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["Office: +91 40 2345 6789", "Admissions: +91 98765 43210", "WhatsApp: +91 98765 43211", "Emergency: +91 98765 43212"],
+      details: ["Office: +91-9864646481", "WhatsApp: +91-9864646481"],
       color: "from-[#48BB78] to-[#38A169]",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@telanganachess.com", "admissions@telanganachess.com", "coaching@telanganachess.com", "events@telanganachess.com"],
+      details: ["telanganachessacademy@gmail.com"],
       color: "from-[#9F7AEA] to-[#D53F8C]",
     },
     {
@@ -189,7 +189,7 @@ export default function ContactPage() {
               </div>
               <CardContent>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">Find Us</h3>
-                <p className="text-gray-600 leading-relaxed">123 Chess Street, Banjara Hills, Hyderabad, Telangana, India</p>
+                <p className="text-gray-600 leading-relaxed"># 11-13-75 Road No 2, Alkapuri ,Kothapet, Hyderabad-500035, Above Pragathi Model School</p>
               </CardContent>
             </Card>
 
@@ -198,13 +198,13 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold mb-4">Contact Support</h3>
                 <div className="mb-4 space-y-2">
                   <div className="flex items-center gap-3">
-                    <MessageCircle className="w-6 h-6" /> WhatsApp: +91 98765 43211
+                    <MessageCircle className="w-6 h-6" /> WhatsApp: +91 9864646481
                   </div>
                   <div className="flex items-center gap-3">
-                    <Phone className="w-6 h-6" /> Call: +91 40 2345 6789
+                    <Phone className="w-6 h-6" /> Call: +91 9864646481
                   </div>
                   <div className="flex items-center gap-3">
-                    <Mail className="w-6 h-6" /> Email: info@telanganachess.com
+                    <Mail className="w-6 h-6" /> Email: telanganachessacademy@gmail.com
                   </div>
                 </div>
                 <Button className="w-full bg-white text-[#2B6CB0] hover:bg-gray-100">Schedule Visit</Button>

@@ -17,118 +17,51 @@ import {
 export default function CoachesPage() {
   const coaches = [
     {
-      name: "GM Rajesh Kumar",
+      name: "Tejavath Naresh",
       title: "Head Coach & Founder",
-      rating: "2650",
-      image: "/placeholder-fmwwn.png",
+      image: "/naresh.jpg",
       specialization: ["Opening Theory", "Endgame Mastery", "Tournament Preparation"],
-      achievements: ["International Grandmaster", "3x National Champion", "Asian Games Bronze"],
+      achievements: ["FIDE Arbiter", "FIDE Rated Player", "Chess Coach"],
       experience: "15+ Years",
       students: "200+",
-      email: "rajesh@telanganachess.com",
-      phone: "+91 98765 43210",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        linkedin: "#",
-        instagram: "#",
-      },
-      bio: "Grandmaster Rajesh Kumar is the visionary founder of our academy with over 15 years of coaching excellence.",
+      bio: "Tejavath Naresh is the visionary founder of our academy with over 15 years of coaching excellence.",
+      color: "from-[#2B6CB0] to-[#9F7AEA]",
     },
     {
-      name: "WGM Priya Sharma",
+      name: "Tejavath Aruna",
       title: "Senior Coach",
       rating: "2450",
-      image: "/placeholder-kf4vr.png",
+      image: "/coach.png",
       specialization: ["Tactical Training", "Youth Development", "Women's Chess"],
-      achievements: ["Women's Grandmaster", "National Women's Champion", "Commonwealth Gold"],
+      achievements: ["FIDE Rated Player", "Chess Coach"],
       experience: "12+ Years",
       students: "150+",
-      email: "priya@telanganachess.com",
-      phone: "+91 98765 43211",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        linkedin: "#",
-        instagram: "#",
-      },
-      bio: "WGM Priya Sharma specializes in developing young talent and has coached multiple national champions.",
+      bio: "Tejavath Aruna specializes in developing young talent and has coached multiple national champions.",
+      color: "from-[#48BB78] to-[#38A169]",
     },
     {
-      name: "IM Arjun Reddy",
+      name: "Ranghanathan K S",
       title: "Junior Coach",
       rating: "2400",
-      image: "/placeholder-azdz7.png",
+      image: "/coach.png",
       specialization: ["Beginner Training", "School Programs", "Online Coaching"],
-      achievements: ["International Master", "Under-25 National Champion", "State Champion"],
+      achievements: ["International FIDE Rated"],
       experience: "8+ Years",
       students: "100+",
-      email: "arjun@telanganachess.com",
-      phone: "+91 98765 43212",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        linkedin: "#",
-        instagram: "#",
-      },
-      bio: "IM Arjun Reddy brings innovative teaching methods and excels in online chess education.",
+      bio: "Ranghanathan K S brings innovative teaching methods and excels in online chess education.",
+      color: "from-[#9F7AEA] to-[#D53F8C]",
     },
     {
-      name: "FM Kavitha Nair",
+      name: "Kethavath Lokesh",
       title: "Assistant Coach",
       rating: "2300",
-      image: "/placeholder-ynvy3.png",
+      image: "/coach.png",
       specialization: ["Puzzle Solving", "Pattern Recognition", "Rapid Chess"],
-      achievements: ["FIDE Master", "State Women's Champion", "University Champion"],
+      achievements: ["International FIDE Rated"],
       experience: "6+ Years",
       students: "80+",
-      email: "kavitha@telanganachess.com",
-      phone: "+91 98765 43213",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        linkedin: "#",
-        instagram: "#",
-      },
-      bio: "FM Kavitha Nair is known for her expertise in tactical training and rapid chess improvement.",
-    },
-    {
-      name: "CM Vikram Singh",
-      title: "Youth Coach",
-      rating: "2200",
-      image: "/placeholder-jfq00.png",
-      specialization: ["Kids Training", "Basic Fundamentals", "Chess Psychology"],
-      achievements: ["Candidate Master", "Youth Champion", "Coaching Certification"],
-      experience: "5+ Years",
-      students: "120+",
-      email: "vikram@telanganachess.com",
-      phone: "+91 98765 43214",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        linkedin: "#",
-        instagram: "#",
-      },
-      bio: "CM Vikram Singh has a special talent for working with children and making chess fun and engaging.",
-    },
-    {
-      name: "WFM Ananya Gupta",
-      title: "Online Coach",
-      rating: "2250",
-      image: "/placeholder-mex2r.png",
-      specialization: ["Digital Learning", "Remote Training", "Chess Software"],
-      achievements: ["Women's FIDE Master", "Online Tournament Winner", "Tech Innovation Award"],
-      experience: "4+ Years",
-      students: "90+",
-      email: "ananya@telanganachess.com",
-      phone: "+91 98765 43215",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        linkedin: "#",
-        instagram: "#",
-      },
-      bio: "WFM Ananya Gupta is our technology expert, pioneering innovative online chess education methods.",
+      bio: "Kethavath Lokesh is known for her expertise in tactical training and rapid chess improvement.",
+      color: "from-[#FF69B4] to-[#D53F8C]",
     },
   ];
 
@@ -150,53 +83,49 @@ export default function CoachesPage() {
 
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {coaches.map((coach, index) => (
               <Card
                 key={index}
-                className="bg-white border border-[#E9D8FD] shadow-lg hover:shadow-xl hover:border-[#9F7AEA]/50 hover-lift overflow-hidden"
+                className={`bg-gradient-to-br ${coach.color} border border-transparent shadow-lg hover:shadow-xl hover-lift overflow-hidden transition-shadow duration-300`}
               >
+                <div className={`h-2 bg-gradient-to-br ${coach.color}`}></div>
                 <div className="relative">
                   <img
                     src={coach.image || "/placeholder.svg"}
                     alt={coach.name}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute top-4 right-4">
-                    <Badge className="bg-gradient-to-r from-[#2B6CB0] to-[#9F7AEA] text-white font-bold">
-                      {coach.rating} ELO
-                    </Badge>
-                  </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                     <h3 className="text-xl font-bold text-white mb-1">{coach.name}</h3>
-                    <p className="text-[#9F7AEA] text-sm font-medium">{coach.title}</p>
+                    <p className="text-white text-sm font-medium">{coach.title}</p>
                   </div>
                 </div>
 
                 <CardContent className="p-6">
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed">{coach.bio}</p>
+                  <p className="text-sm text-gray-100 mb-4 leading-relaxed">{coach.bio}</p>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center p-3 bg-[#EDF2F7]/50 rounded-lg border border-[#2B6CB0]/10">
-                      <Calendar className="w-5 h-5 mx-auto mb-2 text-[#2B6CB0]" />
-                      <div className="text-xs font-semibold text-gray-600">Experience</div>
-                      <div className="text-sm font-bold text-[#2D3748]">{coach.experience}</div>
+                    <div className="text-center p-3 bg-white/10 rounded-lg border border-white/20">
+                      <Calendar className="w-5 h-5 mx-auto mb-2 text-white" />
+                      <div className="text-xs font-semibold text-gray-200">Experience</div>
+                      <div className="text-sm font-bold text-white">{coach.experience}</div>
                     </div>
-                    <div className="text-center p-3 bg-[#EDF2F7]/50 rounded-lg border border-[#2B6CB0]/10">
-                      <Users className="w-5 h-5 mx-auto mb-2 text-[#2B6CB0]" />
-                      <div className="text-xs font-semibold text-gray-600">Students</div>
-                      <div className="text-sm font-bold text-[#2D3748]">{coach.students}</div>
+                    <div className="text-center p-3 bg-white/10 rounded-lg border border-white/20">
+                      <Users className="w-5 h-5 mx-auto mb-2 text-white" />
+                      <div className="text-xs font-semibold text-gray-200">Students</div>
+                      <div className="text-sm font-bold text-white">{coach.students}</div>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-[#2D3748] mb-3">Specializations</h4>
+                    <h4 className="text-sm font-semibold text-white mb-3">Specializations</h4>
                     <div className="flex flex-wrap gap-2">
                       {coach.specialization.map((spec, specIndex) => (
                         <Badge
                           key={specIndex}
                           variant="outline"
-                          className="border-[#9F7AEA]/30 text-[#9F7AEA] hover:bg-[#9F7AEA]/10 text-xs"
+                          className={`border-white/30 text-white hover:bg-white/20 text-xs`}
                         >
                           {spec}
                         </Badge>
@@ -205,60 +134,14 @@ export default function CoachesPage() {
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-[#2D3748] mb-3">Key Achievements</h4>
+                    <h4 className="text-sm font-semibold text-white mb-3">Key Achievements</h4>
                     <div className="space-y-2">
                       {coach.achievements.slice(0, 2).map((achievement, achIndex) => (
                         <div key={achIndex} className="flex items-center gap-2">
-                          <Trophy className="w-3 h-3 text-[#9F7AEA] flex-shrink-0" />
-                          <span className="text-xs text-gray-600">{achievement}</span>
+                          <Trophy className="w-3 h-3 text-white flex-shrink-0" />
+                          <span className="text-xs text-gray-200">{achievement}</span>
                         </div>
                       ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-[#2D3748] mb-3">Connect</h4>
-                    <div className="flex gap-2 justify-center">
-                      <a
-                        href={coach.social.facebook}
-                        aria-label={`${coach.name} Facebook`}
-                        className="p-2 border border-[#2B6CB0]/20 rounded bg-transparent hover:bg-[#2B6CB0]/10 transition"
-                      >
-                        <Facebook className="w-4 h-4 text-[#2B6CB0]" />
-                      </a>
-                      <a
-                        href={coach.social.twitter}
-                        aria-label={`${coach.name} Twitter`}
-                        className="p-2 border border-[#2B6CB0]/20 rounded bg-transparent hover:bg-[#2B6CB0]/10 transition"
-                      >
-                        <Twitter className="w-4 h-4 text-[#2B6CB0]" />
-                      </a>
-                      <a
-                        href={coach.social.linkedin}
-                        aria-label={`${coach.name} Linkedin`}
-                        className="p-2 border border-[#2B6CB0]/20 rounded bg-transparent hover:bg-[#2B6CB0]/10 transition"
-                      >
-                        <Linkedin className="w-4 h-4 text-[#2B6CB0]" />
-                      </a>
-                      <a
-                        href={coach.social.instagram}
-                        aria-label={`${coach.name} Instagram`}
-                        className="p-2 border border-[#2B6CB0]/20 rounded bg-transparent hover:bg-[#2B6CB0]/10 transition"
-                      >
-                        <Instagram className="w-4 h-4 text-[#2B6CB0]" />
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="space-y-3">
-                    <Button className="w-full bg-[#2B6CB0] hover:bg-[#2B6CB0]/90 text-white flex justify-center items-center">
-                      <Mail className="w-4 h-4 mr-2" /> Contact Coach
-                    </Button>
-                    <div className="text-center">
-                      <div className="flex items-center justify-center gap-2 text-xs text-gray-600">
-                        <Phone className="w-3 h-3" />
-                        {coach.phone}
-                      </div>
                     </div>
                   </div>
                 </CardContent>

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const galleryCategories = [
   { id: "all", name: "All Photos", icon: Camera, color: "bg-[#2B6CB0] hover:bg-[#255a99]" }, // Blue gradient base
   { id: "tournaments", name: "Tournaments", icon: Trophy, color: "bg-[#D69E2E] hover:bg-[#b6861f]" }, // Golden amber
-  { id: "classes", name: "Classes", icon: Users, color: "bg-[#2C7A7B] hover:bg-[#245e5f]" }, // Teal base
+  { id: "certificate", name: "Certificate", icon: Users, color: "bg-[#2C7A7B] hover:bg-[#245e5f]" }, // Teal base
   { id: "events", name: "Events", icon: BookOpen, color: "bg-[#276749] hover:bg-[#1f5139]" }, // Dark emerald
 ]
 
@@ -16,68 +16,60 @@ const galleryImages = [
   // No color changes - colors come from galleryCategories color property
   {
     id: 1,
-    src: "/placeholder.svg?height=400&width=600&text=Chess+Tournament+2024",
+    src: "/gallery-1.jpg",
     alt: "Chess Tournament 2024",
     category: "tournaments",
-    title: "State Championship 2024",
-    description: "Our students competing in the state championship",
+    title: "Organising Tournaments",
+    description: "Our students competing in the championship",
   },
   {
     id: 2,
-    src: "/placeholder.svg?height=400&width=600&text=Beginner+Class",
+    src: "/gallery-2.jpg",
     alt: "Beginner Chess Class",
-    category: "classes",
-    title: "Beginner Class Session",
-    description: "Young minds learning the basics of chess",
+    category: "tournaments",
+    title: "Tournaments",
+    description: "Young minds learning the mastery of chess",
   },
   {
     id: 3,
-    src: "/placeholder.svg?height=400&width=600&text=Chess+Workshop",
+    src: "/gallery-3.jpg",
     alt: "Chess Workshop",
-    category: "events",
-    title: "Strategy Workshop",
-    description: "Advanced strategy workshop with GM Rajesh Kumar",
+    category: "tournaments",
+    title: "Inhouse Tournaments",
+    description: "Advanced strategy inhouse tournaments.",
   },
   {
     id: 4,
-    src: "/placeholder.svg?height=400&width=600&text=Youth+Tournament",
+    src: "/certificate-1.jpg",
     alt: "Youth Tournament",
-    category: "tournaments",
-    title: "Youth Championship",
-    description: "Annual youth chess championship",
+    category: "certificate",
+    title: "Fide Arbiter",
+    description: "Tejavath Naresh Sir",
   },
   {
     id: 5,
-    src: "/placeholder.svg?height=400&width=600&text=Advanced+Class",
+    src: "/certificate-2.jpeg",
     alt: "Advanced Chess Class",
-    category: "classes",
-    title: "Advanced Training",
-    description: "Advanced players honing their skills",
+    category: "certificate",
+    title: "Certification",
+    description: "Tejawat Naresh Sir",
   },
   {
     id: 6,
-    src: "/placeholder.svg?height=400&width=600&text=Chess+Seminar",
+    src: "/certificate-3.jpeg",
     alt: "Chess Seminar",
-    category: "events",
-    title: "International Seminar",
-    description: "Seminar with international chess masters",
+    category: "certificate",
+    title: "National Arbiter",
+    description: "Tejawat Naresh Sir",
   },
   {
     id: 7,
-    src: "/placeholder.svg?height=400&width=600&text=School+Tournament",
+    src: "/academy.jpeg",
     alt: "School Tournament",
-    category: "tournaments",
+    category: "events",
     title: "Inter-School Championship",
     description: "Schools competing for the championship title",
-  },
-  {
-    id: 8,
-    src: "/placeholder.svg?height=400&width=600&text=Group+Class",
-    alt: "Group Chess Class",
-    category: "classes",
-    title: "Group Learning Session",
-    description: "Students learning together in group sessions",
-  },
+  }
 ]
 
 export default function GalleryPage() {

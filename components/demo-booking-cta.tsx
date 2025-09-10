@@ -62,7 +62,7 @@ export function DemoBookingCTA() {
               size="lg"
               className="border-[#9F7AEA] text-[#9F7AEA] hover:bg-[#9F7AEA] hover:text-white px-8 py-3 text-lg bg-transparent"
             >
-              Call Us: (555) 123-4567
+              Call Us: +91-9864646481
             </Button>
           </div>
         </div>
