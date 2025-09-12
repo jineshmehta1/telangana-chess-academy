@@ -82,8 +82,8 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-white/80 mt-0.5" />
                 <div>
-                  <p className="text-white text-sm">+91 98 64 64 64 81</p>
-                  <p className="text-white/70 text-xs">Mon - Sat, 9:00 AM - 6:00 PM</p>
+                  <p className="text-white text-sm">+91 9864646481</p>
+                  <p className="text-white/70 text-xs">Mon - Sun, 10:00 AM - 8:00 PM</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
@@ -108,12 +108,39 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-6">Academy Links</h4>
             <div className="space-y-3">
               <div>
+                <h5 className="text-white text-sm font-medium">Telangana Chess Academy </h5>
+                <a
+                  href="https://telanganachessacademy.com/"
+                  className="text-white/70 text-xs hover:text-white transition-colors"
+                >
+                  www.telanganachessacademy.com
+                </a>
+              </div>
+              <div>
+                <h5 className="text-white text-sm font-medium">Telangana Chess school</h5>
+                <a
+                  href="https://www.telanganachessschool.com"
+                  className="text-white/70 text-xs hover:text-white transition-colors"
+                >
+                  www.telanganachessschool.com
+                </a>
+              </div>
+              <div>
                 <h5 className="text-white text-sm font-medium">Bharat chess academy</h5>
                 <a
                   href="https://www.bharatchessacademy.com"
                   className="text-white/70 text-xs hover:text-white transition-colors"
                 >
                   www.bharatchessacademy.com
+                </a>
+              </div>
+              <div>
+                <h5 className="text-white text-sm font-medium">Bharat chess institute</h5>
+                <a
+                  href="http://www.bharatchessinstitute.com"
+                  className="text-white/70 text-xs hover:text-white transition-colors"
+                >
+                  www.bharatchessinstitute.com
                 </a>
               </div>
               <div>
