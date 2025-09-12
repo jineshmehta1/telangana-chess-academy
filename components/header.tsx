@@ -44,13 +44,13 @@ export function Header() {
         {/* Logo Section */}
         <Link href="/" className="flex items-center justify-center space-x-5">
           <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center">
-            <Image src="/logo.jpg" alt="Telangana Chess Academy Logo" width={64} height={64} />
+            <Image src="/logo.ico" alt="Bharat chess academy Logo" width={64} height={64} />
           </div>
           <div className="leading-tight">
             <span
               className="block text-xl font-bold tracking-wide bg-gradient-to-r from-[#2B6CB0] via-[#4299E1] to-[#F56565] bg-clip-text text-transparent"
             >
-              Telangana Chess
+              Bharat Chess
             </span>
             <span
               className="block text-base font-semibold tracking-wider bg-gradient-to-r from-[#F56565] via-[#ED64A6] to-[#2B6CB0] bg-clip-text text-transparent"

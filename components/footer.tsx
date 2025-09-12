@@ -37,7 +37,7 @@ export function Footer() {
                 <span className="text-white font-bold text-lg">♔</span>
               </div>
               <div>
-                <h3 className="font-bold text-lg">Telangana Chess Academy</h3>
+                <h3 className="font-bold text-lg">Bharat chess academy</h3>
                 <p className="text-white/80 text-xs">Professional Chess Training</p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-white/80 mt-0.5" />
                 <div>
-                  <p className="text-white text-sm">telanganachessacademy@gmail.com</p>
+                  <p className="text-white text-sm">bharatchessacademy@gmail.com</p>
                   <p className="text-white/70 text-xs">We'll respond within 24 hours</p>
                 </div>
               </div>
@@ -108,12 +108,12 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-6">Academy Links</h4>
             <div className="space-y-3">
               <div>
-                <h5 className="text-white text-sm font-medium">Telangana Chess Academy</h5>
+                <h5 className="text-white text-sm font-medium">Bharat chess academy</h5>
                 <a
-                  href="https://www.telanganachessacademy.com"
+                  href="https://www.bharatchessacademy.com"
                   className="text-white/70 text-xs hover:text-white transition-colors"
                 >
-                  www.telanganachessacademy.com
+                  www.bharatchessacademy.com
                 </a>
               </div>
               <div>
@@ -131,7 +131,7 @@ export function Footer() {
 
         <div className="border-t border-white/30 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/70 text-sm">© 2024 Telangana Chess Academy. All rights reserved.</p>
+            <p className="text-white/70 text-sm">© 2024 Bharat chess academy. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="/terms"

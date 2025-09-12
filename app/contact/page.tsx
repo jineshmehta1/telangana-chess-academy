@@ -49,13 +49,13 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      details: ["telanganachessacademy@gmail.com"],
+      details: ["bharatchessacademy@gmail.com"],
       color: "from-[#9F7AEA] to-[#D53F8C]",
     },
     {
       icon: Clock,
       title: "Hours",
-      details: ["Mon-Fri: 9am - 8pm", "Sat: 9am - 6pm", "Sun: 10am - 4pm", "Holidays by appointment"],
+      details: ["Mon-Sun: 10 AM to 8 PM"],
       color: "from-[#ED8936] to-[#DD6B20]",
     },
   ]
@@ -200,7 +200,7 @@ export default function ContactPage() {
                     <Phone className="w-4 sm:w-6 h-4 sm:h-6" /> Call: +91 9864646481
                   </div>
                   <div className="flex items-center gap-2 sm:gap-3">
-                    <Mail className="w-4 sm:w-6 h-4 sm:h-6" /> Email: telanganachessacademy@gmail.com
+                    <Mail className="w-4 sm:w-6 h-4 sm:h-6" /> Email: Bharatchessacademy@gmail.com
                   </div>
                 </div>
                 <Button className="w-full bg-white text-[#2B6CB0] hover:bg-gray-100 px-2 sm:px-4 py-1 sm:py-2 text-sm sm:text-base">Schedule Visit</Button>

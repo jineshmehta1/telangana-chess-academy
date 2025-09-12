@@ -45,7 +45,7 @@ export function HeroSection() {
       <div className="absolute bottom-4 sm:bottom-16 right-4 sm:right-12 w-16 sm:w-28 h-16 sm:h-28 bg-[#2B6CB0] rounded-full opacity-15 animate-pulse-slow" style={{ animationDelay: "1s" }}></div>
       <div className="absolute bottom-8 sm:bottom-32 left-4 sm:left-8 w-12 sm:w-16 h-12 sm:h-16 bg-[#FF69B4] rounded-full opacity-10 animate-pulse-slow" style={{ animationDelay: "1.5s" }}></div>
 
-      <div className="container max-w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container max-w-full mx-auto px-8 sm:px-16 lg:px-32 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-center">
           <div className="text-center lg:text-left animate-fade-in">
             <div className="inline-flex items-center space-x-2 bg-[#E2E8F0] text-[#2B6CB0] px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-8 shadow-md border border-[#E2E8F0]">
@@ -63,7 +63,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-[#4A5568] mb-6 sm:mb-10 max-w-2xl leading-relaxed font-medium">
-              Telangana Chess Academy empowers you with world-class training from FIDE-rated coaches. Build unshakeable
+              Bharat chess academy empowers you with world-class training from FIDE-rated coaches. Build unshakeable
               skills, dominate the board, and rise to the top of the chess world.
             </p>
 

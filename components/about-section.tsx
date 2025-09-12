@@ -28,7 +28,7 @@ export function AboutSection() {
 
   const process = [
     "Open Website",
-    "Visit telanganachessacademy.com",
+    "Visit bharatchessacademy.com",
     "Select Online Coaching",
     "Enter User Name and Password",
     "Username: tca",
@@ -42,13 +42,13 @@ export function AboutSection() {
           {/* Left Content */}
           <div className="animate-slide-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-              "Telangana Chess Academy is the place for professional chess training"
+              "Bharat chess academy is the place for professional chess training"
             </h2>
 
             <div className="space-y-4 mb-8">
               <div>
-                <h3 className="font-semibold text-foreground mb-2">TELANGANA CHESS ACADEMY</h3>
-                <p className="text-muted-foreground">www.telanganachessacademy.com</p>
+                <h3 className="font-semibold text-foreground mb-2">Bharat chess academy</h3>
+                <p className="text-muted-foreground">www.Bharatchessacademy.com</p>
               </div>
 
               <div>
