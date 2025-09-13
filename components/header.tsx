@@ -76,8 +76,8 @@ export function Header() {
           </div>
         </div>
 
-        <div className="mt-2 lg:mt-0 text-xs md:text-sm text-[#2D3748] flex flex-col lg:flex-row lg:space-x-5 text-center lg:text-right">
-          <span>Whatsapp/Call: +91 9864646481</span>
+        <div className="mt-2 lg:mt-0 text-xs md:text-sm text-[#2D3748] flex flex-col lg:flex-row lg:space-x-1 text-center lg:text-right">
+          <span>WhatsApp/Call: +91 9864646481</span>
           <span className="lg:block hidden">|</span>
           <span>Email: bharatchessacademy@gmail.com</span>
         </div>
