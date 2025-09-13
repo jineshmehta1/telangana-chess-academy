@@ -77,7 +77,7 @@ export function Header() {
         </div>
 
         <div className="mt-2 lg:mt-0 text-xs md:text-sm text-[#2D3748] flex flex-col lg:flex-row lg:space-x-5 text-center lg:text-right">
-          <span>Call: +91 9864646481</span>
+          <span>Whatsapp/Call: +91 9864646481</span>
           <span className="lg:block hidden">|</span>
           <span>Email: bharatchessacademy@gmail.com</span>
         </div>
@@ -86,7 +86,7 @@ export function Header() {
       {/* Navbar Menu */}
       <nav className="bg-[#F5F7FA] border-t border-gray-200 px-4 md:px-6 py-0">
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center justify-center space-x-3 xl:space-x-20">
+        <div className="hidden lg:flex items-center justify-center space-x-3 xl:space-x-16">
           {navItems.map((item) => (
             <div key={item.name} className="relative">
               {item.hasDropdown ? (
