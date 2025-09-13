@@ -1,10 +1,8 @@
 "use client";
-
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
 
 interface NavItem {
   name: string;
@@ -39,48 +37,54 @@ export function Header() {
   ];
 
   return (
-    <header className="bg-[#F5F7FA] py-2 shadow-md fixed w-full z-50 h-24">
-      <div className="container mx-auto px-4 flex justify-between items-center h-full">
-        {/* Logo Section */}
-        <Link href="/" className="flex items-center justify-center space-x-5">
-          <div className="w-16 h-16 rounded-full overflow-hidden flex items-center justify-center">
-            <Image src="/logo.ico" alt="Bharat chess academy Logo" width={64} height={64} />
+    <header className="bg-[#F5F7FA] shadow-md fixed w-full z-50">
+      {/* Top Section: Logo + Academy + Contact */}
+      <div className="flex flex-col lg:flex-row justify-between items-center px-4 md:px-60 py-3">
+        <Link href="/" className="flex items-center space-x-1.5 md:space-x-4">
+          <div className="w-10 h-10 flex items-center justify-center">
+            <Image
+              src="/logo.ico"
+              alt="Bharat Chess Academy Logo"
+              width={55}
+              height={55}
+            />
           </div>
-          <div className="leading-tight">
-            <span
-              className="block text-xl font-bold tracking-wide bg-gradient-to-r from-[#2B6CB0] via-[#4299E1] to-[#F56565] bg-clip-text text-transparent"
-            >
-              Bharat Chess
-            </span>
-            <span
-              className="block text-base font-semibold tracking-wider bg-gradient-to-r from-[#F56565] via-[#ED64A6] to-[#2B6CB0] bg-clip-text text-transparent"
-            >
-              Academy
-            </span>
-          </div>
+          <span className="text-base md:text-xl font-semibold tracking-tight bg-gradient-to-r from-[#2B6CB0] via-[#4299E1] to-[#F56565] bg-clip-text text-transparent whitespace-nowrap">
+            Bharat Chess Academy
+          </span>
         </Link>
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-4">
+
+        <div className="mt-2 lg:mt-0 text-xs md:text-sm text-[#2D3748] flex flex-col lg:flex-row lg:space-x-5 text-center lg:text-right">
+          <span>Call: +91 9864646481</span>
+          <span className="lg:block hidden">|</span>
+          <span>Email: bharatchessacademy@gmail.com</span>
+        </div>
+      </div>
+
+      {/* Navbar Menu */}
+      <nav className="bg-[#F5F7FA] border-t border-gray-200 px-4 md:px-6 py-2">
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center justify-center space-x-3 xl:space-x-20">
           {navItems.map((item) => (
             <div key={item.name} className="relative">
               {item.hasDropdown ? (
                 <div className="relative">
                   <button
                     onClick={() => setIsAboutOpen(!isAboutOpen)}
-                    className="flex items-center space-x-1 text-[#2D3748] hover:text-[#2B6CB0] font-medium py-2 px-3 rounded"
+                    className="flex items-center space-x-1 text-[#2D3748] hover:text-[#2B6CB0] font-medium py-1 px-1.5 text-md whitespace-nowrap"
                     aria-expanded={isAboutOpen}
                     aria-haspopup="true"
                   >
                     <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-3 h-3" />
                   </button>
                   {isAboutOpen && (
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded shadow-lg border border-gray-200">
+                    <div className="absolute top-full left-0 mt-1 w-40 bg-white text-[#2D3748] rounded shadow-lg border border-gray-200 z-10">
                       {item.dropdownItems?.map((dropItem) => (
                         <Link
                           key={dropItem.name}
                           href={dropItem.href}
-                          className="block px-4 py-2 text-[#2D3748] hover:bg-gray-100"
+                          className="block px-3 py-1.5 text-md hover:bg-gray-100 whitespace-nowrap"
                           onClick={() => setIsAboutOpen(false)}
                         >
                           {dropItem.name}
@@ -89,111 +93,103 @@ export function Header() {
                     </div>
                   )}
                 </div>
+              ) : item.name === "Online Coaching" ? (
+                <a
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2D3748] hover:text-[#2B6CB0] font-medium py-1 px-1.5 text-md rounded hover:bg-gray-100 whitespace-nowrap"
+                >
+                  {item.name}
+                </a>
               ) : (
                 <Link
                   href={item.href}
-                  className="text-[#2D3748] hover:text-[#2B6CB0] font-medium py-2 px-3 rounded hover:bg-gray-100"
+                  className="text-[#2D3748] hover:text-[#2B6CB0] font-medium py-1 px-1.5 text-md rounded hover:bg-gray-100 whitespace-nowrap"
                 >
                   {item.name}
                 </Link>
               )}
             </div>
           ))}
-        </nav>
-
-        {/* Desktop Contact and Buttons */}
-        <div className="hidden lg:flex items-center space-x-4">
-          <div className="text-[#2D3748] text-sm">+919864646481</div>
-          <Link href="/contact">
-          <Button className="bg-[#2B6CB0] hover:bg-[#2C5282] text-white px-4 py-2 rounded-full" >
-            Join Now
-          </Button>
-          </Link>
-          <Link href="https://pages.razorpay.com/pl_G2wqpnC6qMaDXV/view">
-            <Button
-              variant="outline"
-              className="border-[#F56565] text-[#F56565] hover:bg-[#F56565] hover:text-white px-4 py-2 rounded-full"
-            >
-              Quick Pay
-            </Button>
-          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden p-2 text-[#2D3748] hover:text-[#2B6CB0]"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
+        <div className="lg:hidden flex justify-between items-center">
+          <button
+            className="p-1 text-[#2D3748] hover:text-[#2B6CB0]"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              />
+            </svg>
+          </button>
+        </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 w-full bg-[#F5F7FA] shadow-md">
-            <nav className="flex flex-col space-y-2 p-4">
-              {navItems.map((item) => (
-                <div key={item.name}>
-                  {item.hasDropdown ? (
-                    <div>
-                      <button
-                        onClick={() => setIsAboutOpen(!isAboutOpen)}
-                        className="flex items-center justify-between w-full text-[#2D3748] hover:text-[#2B6CB0] py-2"
-                        aria-expanded={isAboutOpen}
-                        aria-haspopup="true"
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                      {isAboutOpen && (
-                        <div className="ml-4 mt-2 space-y-2">
-                          {item.dropdownItems?.map((dropItem) => (
-                            <Link
-                              key={dropItem.name}
-                              href={dropItem.href}
-                              className="block text-[#2D3748] hover:text-[#2B6CB0] py-2"
-                              onClick={() => {
-                                setIsAboutOpen(false);
-                                setIsMobileMenuOpen(false);
-                              }}
-                            >
-                              {dropItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-[#2D3748] hover:text-[#2B6CB0] py-2"
-                      onClick={() => setIsMobileMenuOpen(false)}
+          <div className="lg:hidden mt-3 space-y-2 text-[#2D3748]">
+            {navItems.map((item) => (
+              <div key={item.name}>
+                {item.hasDropdown ? (
+                  <div>
+                    <button
+                      onClick={() => setIsAboutOpen(!isAboutOpen)}
+                      className="flex items-center justify-between w-full hover:text-[#2B6CB0] py-1.5 text-sm"
+                      aria-expanded={isAboutOpen}
+                      aria-haspopup="true"
                     >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="mt-4 space-y-2">
-                <div className="text-[#2D3748] text-sm">+91 98 64 64 64 81</div>
-                <Button className="w-full bg-[#2B6CB0] hover:bg-[#2C5282] text-white py-2 rounded-full">
-                  Join Now
-                </Button>
-                <Link href="/quick-pay">
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#F56565] text-[#F56565] hover:bg-[#F56565] hover:text-white py-2 rounded-full"
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-3 h-3" />
+                    </button>
+                    {isAboutOpen && (
+                      <div className="ml-3 mt-1 space-y-1">
+                        {item.dropdownItems?.map((dropItem) => (
+                          <Link
+                            key={dropItem.name}
+                            href={dropItem.href}
+                            className="block text-[#2D3748] bg-white hover:bg-gray-100 py-1.5 text-sm px-3"
+                            onClick={() => {
+                              setIsAboutOpen(false);
+                              setIsMobileMenuOpen(false);
+                            }}
+                          >
+                            {dropItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : item.name === "Online Coaching" ? (
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#2B6CB0] py-1.5 text-sm block"
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Quick Pay
-                  </Button>
-                </Link>
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="hover:text-[#2B6CB0] py-1.5 text-sm block"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </div>
-            </nav>
+            ))}
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
 }
