@@ -86,7 +86,7 @@ export function Header() {
       {/* Navbar Menu */}
       <nav className="bg-[#F5F7FA] border-t border-gray-200 px-4 md:px-6 py-0">
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center justify-center space-x-3 xl:space-x-12">
+        <div className="hidden lg:flex items-center justify-center space-x-3 xl:space-x-10">
           {navItems.map((item) => (
             <div key={item.name} className="relative">
               {item.hasDropdown ? (
