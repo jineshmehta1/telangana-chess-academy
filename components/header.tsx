@@ -40,19 +40,41 @@ export function Header() {
     <header className="bg-[#F5F7FA] shadow-md fixed w-full z-50">
       {/* Top Section: Logo + Academy + Contact */}
       <div className="flex flex-col lg:flex-row justify-between items-center px-4 md:px-60 py-3">
-        <Link href="/" className="flex items-center space-x-1.5 md:space-x-4">
-          <div className="w-10 h-10 flex items-center justify-center">
-            <Image
-              src="/logo.ico"
-              alt="Bharat Chess Academy Logo"
-              width={55}
-              height={55}
-            />
+        <div className="flex items-center w-full lg:w-auto">
+          {/* Logo and Title (Centered) */}
+          <div className="flex flex-1 justify-center lg:justify-start">
+            <Link href="/" className="flex items-center space-x-1.5 md:space-x-4">
+              <div className="w-10 h-10 flex items-center justify-center">
+                <Image
+                  src="/logo.ico"
+                  alt="Bharat Chess Academy Logo"
+                  width={55}
+                  height={55}
+                />
+              </div>
+              <span className="text-base md:text-xl font-semibold tracking-tight bg-gradient-to-r from-[#2B6CB0] via-[#4299E1] to-[#F56565] bg-clip-text text-transparent whitespace-nowrap">
+                Bharat Chess Academy
+              </span>
+            </Link>
           </div>
-          <span className="text-base md:text-xl font-semibold tracking-tight bg-gradient-to-r from-[#2B6CB0] via-[#4299E1] to-[#F56565] bg-clip-text text-transparent whitespace-nowrap">
-            Bharat Chess Academy
-          </span>
-        </Link>
+          {/* Mobile Menu Toggle (Right-aligned) */}
+          <div className="lg:hidden flex items-center">
+            <button
+              className="p-1 text-[#2D3748] hover:text-[#2B6CB0]"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
 
         <div className="mt-2 lg:mt-0 text-xs md:text-sm text-[#2D3748] flex flex-col lg:flex-row lg:space-x-5 text-center lg:text-right">
           <span>Call: +91 9864646481</span>
@@ -62,7 +84,7 @@ export function Header() {
       </div>
 
       {/* Navbar Menu */}
-      <nav className="bg-[#F5F7FA] border-t border-gray-200 px-4 md:px-6 py-2">
+      <nav className="bg-[#F5F7FA] border-t border-gray-200 px-4 md:px-6 py-0">
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center justify-center space-x-3 xl:space-x-20">
           {navItems.map((item) => (
@@ -112,24 +134,6 @@ export function Header() {
               )}
             </div>
           ))}
-        </div>
-
-        {/* Mobile Menu Toggle */}
-        <div className="lg:hidden flex justify-between items-center">
-          <button
-            className="p-1 text-[#2D3748] hover:text-[#2B6CB0]"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-              />
-            </svg>
-          </button>
         </div>
 
         {/* Mobile Menu */}
