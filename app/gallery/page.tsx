@@ -69,6 +69,14 @@ const galleryImages = [
     category: "events",
     title: "Inter-School Championship",
     description: "Schools competing for the championship title",
+  },
+  {
+    id: 7,
+    src: "/certificate.jpg",
+    alt: "School Tournament",
+    category: "certificate",
+    title: "Arena International Master",
+    description: "Tejawat Naresh Sir",
   }
 ]
 

@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Play, Users, Trophy, Star, Sparkles, Award } from "lucide-react";
+import { Play, Users, Trophy, Star, Sparkles, Award, VideoIcon , BellIcon } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export function HeroSection() {
   const [hoveredPiece, setHoveredPiece] = useState<number | null>(null);
@@ -55,11 +56,15 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 text-balance leading-tight">
-              <span className="text-[#2D3748]">Unleash Your</span>
-              <span className="block relative">
+              <span className="text-[#2D3748]"><Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" className="cursor-pointer">
+              <Button size="lg" className="bg-[#2B6CB0] hover:bg-[#2B6CB0]/90 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg animate-pulse-slow text-base sm:text-lg">
+                <Users className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Join Our Online Coaching
+              </Button>
+              </Link></span>
+              {/* <span className="block relative">
                 <div className="absolute inset-0 bg-[#E2E8F0]/80 rounded-lg -z-10"></div>
-                <span className="text-[#2B6CB0] font-black text-shadow relative z-10">Chess Mastery</span>
-              </span>
+                <span className="text-[#2B6CB0] font-black text-shadow relative z-10">Click Now</span>
+              </span> */}
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl text-[#4A5568] mb-6 sm:mb-10 max-w-2xl leading-relaxed font-medium">
@@ -68,15 +73,26 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start mb-6 sm:mb-12">
-              <Button size="lg" className="bg-[#2B6CB0] hover:bg-[#2B6CB0]/90 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg animate-pulse-slow text-base sm:text-lg">
-                <Users className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Start Now
-              </Button>
+              <Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" className="cursor-pointer">
               <Button size="lg" variant="outline" className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
-                <Play className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Watch Demo
+                <VideoIcon className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> G-Meet
               </Button>
+              </Link>
+              <Link href="https://meet.jit.si/TelanganaChessAcademy" className="cursor-pointer">
+              <Button size="lg" variant="outline" className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
+                <Play className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Start Call
+              </Button>
+              </Link>
+              <Link href="https://meet.google.com/atu-ziid-ojg" className="cursor-pointer">
               <Button size="lg" variant="outline" className="border-2 border-[#FF69B4] text-[#FF69B4] hover:bg-[#FF69B4] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
-                <Sparkles className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Explore Courses
+                <Sparkles className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> TCS Meeting
               </Button>
+              </Link>
+              <Link href="https://meet.google.com/uux-vyxa-pgq" className="cursor-pointer">
+              <Button size="lg" variant="outline" className="border-2 border-[#06402B] text-[#FF29G4] hover:bg-[#90EE90] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
+                <BellIcon className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> BCA Meeting
+              </Button>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 justify-center lg:justify-start">
