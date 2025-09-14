@@ -56,7 +56,7 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold mb-4 sm:mb-6 text-balance leading-tight">
-              <span className="text-[#2D3748]"><Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" className="cursor-pointer">
+              <span className="text-[#2D3748]"><Link href="https://coaching.telanganachessacademy.com/login" target="_blank" className="cursor-pointer">
               <Button size="lg" className="bg-[#2B6CB0] hover:bg-[#2B6CB0]/90 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg animate-pulse-slow text-base sm:text-lg">
                 <Users className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Join Our Online Coaching
               </Button>
@@ -73,22 +73,22 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start mb-6 sm:mb-12">
-              <Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" className="cursor-pointer">
+              <Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" target="_blank" className="cursor-pointer">
               <Button size="lg" variant="outline" className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
                 <VideoIcon className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> G-Meet
               </Button>
               </Link>
-              <Link href="https://meet.jit.si/TelanganaChessAcademy" className="cursor-pointer">
+              <Link href="https://meet.jit.si/TelanganaChessAcademy" target="_blank" className="cursor-pointer">
               <Button size="lg" variant="outline" className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
                 <Play className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> Start Call
               </Button>
               </Link>
-              <Link href="https://meet.google.com/atu-ziid-ojg" className="cursor-pointer">
+              <Link href="https://meet.google.com/atu-ziid-ojg" target="_blank" className="cursor-pointer">
               <Button size="lg" variant="outline" className="border-2 border-[#FF69B4] text-[#FF69B4] hover:bg-[#FF69B4] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
                 <Sparkles className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> TCS Meeting
               </Button>
               </Link>
-              <Link href="https://meet.google.com/uux-vyxa-pgq" className="cursor-pointer">
+              <Link href="https://meet.google.com/uux-vyxa-pgq" target="_blank" className="cursor-pointer">
               <Button size="lg" variant="outline" className="border-2 border-[#06402B] text-[#FF29G4] hover:bg-[#90EE90] hover:text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-md text-base sm:text-lg transition-all duration-300">
                 <BellIcon className="w-5 sm:w-6 h-5 sm:h-6 mr-2 sm:mr-3" /> BCA Meeting
               </Button>
