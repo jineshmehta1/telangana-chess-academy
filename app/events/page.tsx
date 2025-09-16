@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link";
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -241,9 +242,11 @@ export default function EventsPage() {
                         </div>
                       </div>
 
+                      <Link href="/contact" className="cursor-pointer w-full sm:w-auto">
                       <Button className={`w-full bg-gradient-to-r ${event.color} text-white hover:opacity-90 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base`}>
                         Register Now <ArrowRight className="ml-1 sm:ml-2 w-3 sm:w-4 h-3 sm:h-4"/>
                       </Button>
+                      </Link>
                     </CardContent>
                   </Card>
                 ))}
@@ -302,52 +305,6 @@ export default function EventsPage() {
               </div>
             </TabsContent>
           </Tabs>
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-br from-blue-700 to-cyan-800 py-8 sm:py-12 md:py-16">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-12 md:mb-16 text-white">Event Highlights</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-            {[
-              {
-                icon: Trophy,
-                title: "Competitive Tournaments",
-                description: "Regular tournaments with quality prize pools.",
-              },
-              {
-                icon: BookOpen,
-                title: "Educational Workshops",
-                description: "Learn from grandmasters and experts.",
-              },
-              {
-                icon: Users,
-                title: "Community Events",
-                description: "Connect and play with fellow enthusiasts.",
-              },
-            ].map((highlight, idx) => (
-              <Card key={idx} className="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 rounded-md transform transition hover:scale-105">
-                <CardContent className="p-2 sm:p-4 md:p-6 text-center text-white">
-                  <highlight.icon className="mx-auto mb-2 sm:mb-4 w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16"/>
-                  <h3 className="text-xl sm:text-2xl font-semibold mb-1 sm:mb-2 md:mb-3">{highlight.title}</h3>
-                  <p className="opacity-80 text-sm sm:text-base">{highlight.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-8 sm:py-12 md:py-16">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8 text-gray-900">Ready to Participate?</h2>
-          <p className="mb-4 sm:mb-6 md:mb-8 max-w-md mx-auto text-gray-700 text-base sm:text-lg">
-            Join our vibrant community and register for upcoming events!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center">
-            <Button className="bg-gradient-to-r from-blue-700 to-cyan-800 text-white px-4 sm:px-6 py-2 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base">View All Events</Button>
-            <Button variant="outline" className="text-blue-700 border-blue-300 hover:bg-blue-50 px-4 sm:px-6 py-2 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base">Contact Organizers</Button>
-          </div>
         </div>
       </section>
     </div>

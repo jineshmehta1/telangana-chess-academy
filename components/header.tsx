@@ -27,7 +27,7 @@ export function Header() {
         { name: "Achievements", href: "/about/#achievements" },
       ],
     },
-    { name: "Our Courses", href: "/courses" },
+    { name: "Courses", href: "/courses" },
     { name: "Our Coaches", href: "/coaches" },
     { name: "Online Coaching", href: "https://coaching.telanganachessacademy.com/" },
     { name: "Events", href: "/events" },

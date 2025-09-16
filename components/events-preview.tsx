@@ -119,9 +119,11 @@ export function EventsPreview() {
                     <Users className="h-4 w-4 text-[#2B6CB0]" />
                     <span>{event.participants}</span>
                   </div>
+                  <Link href="/contact" className="cursor-pointer w-full sm:w-auto">
                   <Button className="w-full mt-4 bg-[#2B6CB0] hover:bg-[#2B6CB0]/90 text-white">
                     Register Now
                   </Button>
+                  </Link>
                 </CardContent>
               </Card>
             );

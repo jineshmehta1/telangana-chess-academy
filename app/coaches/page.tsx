@@ -6,13 +6,8 @@ import {
   Star,
   Users,
   Calendar,
-  Mail,
-  Phone,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function CoachesPage() {
   const coaches = [
@@ -69,13 +64,13 @@ export default function CoachesPage() {
     <div className="min-h-screen">
       <section className="pt-32 pb-16 px-4 bg-[#E9D8FD]">
         <div className="max-w-6xl mx-auto text-center">
-          <Badge className="mb-6 bg-gradient-to-r from-[#2B6CB0] to-[#9F7AEA] text-white px-6 py-2 text-lg">
+          <Badge className="mb-6 bg-gradient-to-r from-[#2B6CB0] to-[#9F7AEA] text-white px-4 py-1.5 text-base">
             Meet Our Team
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 text-[#2D3748]">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#2D3748]">
             Our Expert Coaches
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Learn from the best! Our team of experienced grandmasters, international masters, and certified coaches are dedicated to helping you achieve your chess goals.
           </p>
         </div>
@@ -83,7 +78,7 @@ export default function CoachesPage() {
 
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-12"> {/* Increased gap here */}
             {coaches.map((coach, index) => (
               <Card
                 key={index}
@@ -94,38 +89,38 @@ export default function CoachesPage() {
                   <img
                     src={coach.image || "/placeholder.svg"}
                     alt={coach.name}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-48 object-cover"  
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                    <h3 className="text-xl font-bold text-white mb-1">{coach.name}</h3>
-                    <p className="text-white text-sm font-medium">{coach.title}</p>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3">
+                    <h3 className="text-lg font-bold text-white mb-1">{coach.name}</h3>
+                    <p className="text-white text-xs font-medium">{coach.title}</p>
                   </div>
                 </div>
 
-                <CardContent className="p-6">
-                  <p className="text-sm text-gray-100 mb-4 leading-relaxed">{coach.bio}</p>
+                <CardContent className="p-4"> {/* Reduced padding */}
+                  <p className="text-xs text-gray-100 mb-3 leading-relaxed">{coach.bio}</p>
 
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center p-3 bg-white/10 rounded-lg border border-white/20">
-                      <Calendar className="w-5 h-5 mx-auto mb-2 text-white" />
-                      <div className="text-xs font-semibold text-gray-200">Experience</div>
-                      <div className="text-sm font-bold text-white">{coach.experience}</div>
+                  <div className="grid grid-cols-2 gap-3 mb-5">
+                    <div className="text-center p-2 bg-white/10 rounded-lg border border-white/20">
+                      <Calendar className="w-4 h-4 mx-auto mb-1 text-white" />
+                      <div className="text-[9px] font-semibold text-gray-200">Experience</div>
+                      <div className="text-xs font-bold text-white">{coach.experience}</div>
                     </div>
-                    <div className="text-center p-3 bg-white/10 rounded-lg border border-white/20">
-                      <Users className="w-5 h-5 mx-auto mb-2 text-white" />
-                      <div className="text-xs font-semibold text-gray-200">Students</div>
-                      <div className="text-sm font-bold text-white">{coach.students}</div>
+                    <div className="text-center p-2 bg-white/10 rounded-lg border border-white/20">
+                      <Users className="w-4 h-4 mx-auto mb-1 text-white" />
+                      <div className="text-[9px] font-semibold text-gray-200">Students</div>
+                      <div className="text-xs font-bold text-white">{coach.students}</div>
                     </div>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Specializations</h4>
-                    <div className="flex flex-wrap gap-2">
+                  <div className="mb-5">
+                    <h4 className="text-xs font-semibold text-white mb-2">Specializations</h4>
+                    <div className="flex flex-wrap gap-1">
                       {coach.specialization.map((spec, specIndex) => (
                         <Badge
                           key={specIndex}
                           variant="outline"
-                          className={`border-white/30 text-white hover:bg-white/20 text-xs`}
+                          className="border-white/30 text-white hover:bg-white/20 text-[10px]"
                         >
                           {spec}
                         </Badge>
@@ -133,13 +128,13 @@ export default function CoachesPage() {
                     </div>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Key Achievements</h4>
-                    <div className="space-y-2">
+                  <div className="mb-5">
+                    <h4 className="text-xs font-semibold text-white mb-2">Key Achievements</h4>
+                    <div className="space-y-1">
                       {coach.achievements.slice(0, 2).map((achievement, achIndex) => (
-                        <div key={achIndex} className="flex items-center gap-2">
+                        <div key={achIndex} className="flex items-center gap-1">
                           <Trophy className="w-3 h-3 text-white flex-shrink-0" />
-                          <span className="text-xs text-gray-200">{achievement}</span>
+                          <span className="text-[10px] text-gray-200">{achievement}</span>
                         </div>
                       ))}
                     </div>
@@ -161,20 +156,17 @@ export default function CoachesPage() {
               {
                 icon: Star,
                 title: "Proven Track Record",
-                description:
-                  "Our coaches have trained numerous national and international champions with consistent results.",
+                description: "Our coaches have trained numerous national and international champions with consistent results.",
               },
               {
                 icon: Users,
                 title: "Personalized Approach",
-                description:
-                  "Each coach adapts their teaching style to match individual learning preferences and goals.",
+                description: "Each coach adapts their teaching style to match individual learning preferences and goals.",
               },
               {
                 icon: Trophy,
                 title: "Competitive Experience",
-                description:
-                  "All our coaches are active or former competitive players who understand tournament pressure.",
+                description: "All our coaches are active or former competitive players who understand tournament pressure.",
               },
             ].map((feature, index) => (
               <Card
@@ -196,15 +188,15 @@ export default function CoachesPage() {
 
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[#2D3748]">
-            Ready to Start Learning?
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-[#2D3748]">Ready to Start Learning?</h2>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
             Book a trial session with any of our expert coaches and begin your journey to chess mastery today!
           </p>
-          <Button className="bg-[#9F7AEA] hover:bg-[#8B6BC1] text-white px-8 py-4 text-lg">
-            Book Trial Session
-          </Button>
+          <Link href="/contact" className="cursor-pointer w-full sm:w-auto">
+            <Button className="bg-[#9F7AEA] hover:bg-[#8B6BC1] text-white px-8 py-4 text-lg">
+              Book Trial Session
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

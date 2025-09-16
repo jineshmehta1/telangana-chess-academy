@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookOpen, Clock, Star, Users } from "lucide-react";
+import Link from "next/link";
 
 export function DemoBookingCTA() {
   const benefits = [
@@ -51,12 +52,14 @@ export function DemoBookingCTA() {
             Book a free demo lesson today and discover how our expert instructors can help you master the game of chess.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link href="/contact" className="cursor-pointer w-full sm:w-auto">
             <Button
               size="lg"
               className="bg-[#2B6CB0] hover:bg-[#2B6CB0]/90 text-white px-8 py-3 text-lg"
             >
               Book Free Demo Lesson
             </Button>
+            </Link>
             <Button
               variant="outline"
               size="lg"

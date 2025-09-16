@@ -13,6 +13,7 @@ import {
   Zap,
   Crown,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function CoursesPage() {
   const [expandedCourses, setExpandedCourses] = useState<{ [key: number]: boolean }>({});
@@ -249,7 +250,7 @@ export default function CoursesPage() {
       <section className="pt-16 sm:pt-24 md:pt-32 pb-8 sm:pb-12 md:pb-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <Badge className="mb-4 sm:mb-6 bg-gradient-to-r from-[#2B6CB0] to-[#9F7AEA] text-white px-4 sm:px-6 py-1 sm:py-2 text-sm sm:text-lg">
-            Our Courses
+            Courses
           </Badge>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 bg-gradient-to-r from-[#2B6CB0] to-[#9F7AEA] bg-clip-text text-transparent">
             Chess Courses for Every Level
@@ -393,9 +394,11 @@ export default function CoursesPage() {
                   </div>
                   {/* CTA */}
                   <div className="flex gap-2 sm:gap-3">
+                    <Link href="/contact" className="flex items-center cursor-pointer">
                     <Button className={`flex-1 bg-gradient-to-r ${course.color} hover:opacity-90 text-white px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base`}>
                       Enroll Now
                     </Button>
+                    </Link>
                     <Button variant="outline" className="border-green-300 text-green-700 hover:bg-green-50 bg-transparent px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base">
                       Learn More
                     </Button>
@@ -454,12 +457,15 @@ export default function CoursesPage() {
             Join thousands of students who have improved their chess skills with our expert-designed courses. Start with a free trial class today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="cursor-pointer w-full sm:w-auto">
             <Button
               size="lg"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 sm:px-8 py-2 sm:py-3 text-base sm:text-lg"
             >
               Book Free Trial
             </Button>
+            </Link>
+            <Link href="/contact" className="cursor-pointer w-full sm:w-auto">
             <Button
               size="lg"
               variant="outline"
@@ -467,6 +473,7 @@ export default function CoursesPage() {
             >
               Contact Us
             </Button>
+            </Link>
           </div>
         </div>
       </section>

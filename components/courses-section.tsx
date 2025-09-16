@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Clock, Users, Star, ArrowRight } from "lucide-react"
+import Link from "next/link";
 
 export function CoursesSection() {
   const courses = [
@@ -85,10 +86,12 @@ export function CoursesSection() {
                   <span className="text-2xl font-bold text-foreground">{course.price}</span>
                   <span className="text-sm text-muted-foreground">per course</span>
                 </div>
+                <Link href="/contact" className="flex items-center cursor-pointer">
                 <Button className="w-full bg-accent hover:bg-accent/90 group">
                   Enroll Now
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
+                </Link>
               </div>
             </Card>
           ))}
