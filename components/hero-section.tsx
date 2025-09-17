@@ -10,6 +10,17 @@ export function HeroSection() {
 
   const chessPieces = ["♔", "♕", "♖", "♗", "♘", "♙"];
 
+  const initialChessBoard = [
+    ["♜", "♞", "♝", "♛", "♚", "♝", "♞", "♜"],
+    ["♟", "♟", "♟", "♟", "♟", "♟", "♟", "♟"],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["", "", "", "", "", "", "", ""],
+    ["♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙"],
+    ["♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"],
+  ];
+
   return (
     <section
       id="home"
@@ -68,48 +79,72 @@ export function HeroSection() {
               </span>
             </h1>
 
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 xs:gap-6 sm:gap-8 md:gap-10 justify-center lg:justify-start mb-4 xs:mb-6 sm:mb-8 md:mb-12">
+  <Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" target="_blank" className="cursor-pointer w-full sm:w-auto">
+    <Button
+      size="sm"
+      variant="outline"
+      className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-3 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-md text-xs xs:text-sm sm:text-base md:text-base transition-all duration-300 w-full"
+    >
+      <VideoIcon className="w-4 h-4 mr-2" /> G-Meet
+    </Button>
+  </Link>
+
+  <Link href="https://meet.jit.si/TelanganaChessAcademy" target="_blank" className="cursor-pointer w-full sm:w-auto">
+    <Button
+      size="sm"
+      variant="outline"
+      className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-3 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-md text-xs xs:text-sm sm:text-base md:text-base transition-all duration-300 w-full"
+    >
+      <Play className="w-4 h-4 mr-2" /> Start Call
+    </Button>
+  </Link>
+
+  <Link href="https://meet.google.com/wuk-nfie-mgx" target="_blank" className="cursor-pointer w-full sm:w-auto">
+    <Button
+      size="sm"
+      variant="outline"
+      className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-3 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-md text-xs xs:text-sm sm:text-base md:text-base transition-all duration-300 w-full"
+    >
+      <Play className="w-4 h-4 mr-2" /> Call Naresh
+    </Button>
+  </Link>
+
+  <Link href="https://meet.google.com/atu-ziid-ojg" target="_blank" className="cursor-pointer w-full sm:w-auto">
+    <Button
+      size="sm"
+      variant="outline"
+      className="border-2 border-[#06402B] text-[#06402B] hover:bg-[#06402B] hover:text-white font-bold px-3 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-md text-xs xs:text-sm sm:text-base md:text-base transition-all duration-300 w-full"
+    >
+      <Sparkles className="w-4 h-4 mr-2" /> TCS Meeting
+    </Button>
+  </Link>
+
+  <Link href="https://meet.google.com/uux-vyxa-pgq" target="_blank" className="cursor-pointer w-full sm:w-auto">
+    <Button
+      size="sm"
+      variant="outline"
+      className="border-2 border-[#06402B] text-[#06402B] hover:bg-[#06402B] hover:text-white font-bold px-3 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-md text-xs xs:text-sm sm:text-base md:text-base transition-all duration-300 w-full"
+    >
+      <BellIcon className="w-4 h-4 mr-2" /> BCA Meeting
+    </Button>
+  </Link>
+
+  <Link href="https://meet.google.com/mxj-uwyj-vzp" target="_blank" className="cursor-pointer w-full sm:w-auto">
+    <Button
+      size="sm"
+      variant="outline"
+      className="border-2 border-[#06402B] text-[#06402B] hover:bg-[#06402B] hover:text-white font-bold px-3 xs:px-4 py-1.5 xs:py-2 rounded-full shadow-md text-xs xs:text-sm sm:text-base md:text-base transition-all duration-300 w-full"
+    >
+      <BellIcon className="w-4 h-4 mr-2" /> Call Rohith
+    </Button>
+  </Link>
+</div>
+
+
             <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-[#4A5568] mb-4 xs:mb-6 sm:mb-8 md:mb-10 max-w-xl xs:max-w-2xl leading-relaxed font-medium mx-auto lg:mx-0">
               Bharat chess academy empowers you with world-class training from FIDE-rated coaches. Build unshakeable skills, dominate the board, and rise to the top of the chess world.
             </p>
-
-            <div className="flex flex-col sm:flex-row flex-wrap gap-2 xs:gap-3 sm:gap-4 md:gap-5 justify-center lg:justify-start mb-4 xs:mb-6 sm:mb-8 md:mb-12">
-              <Link href="https://meet.google.com/vjj-cfpx-dav?pli=1" target="_blank" className="cursor-pointer w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 md:py-4 rounded-full shadow-md text-sm xs:text-base sm:text-lg md:text-xl transition-all duration-300 w-full"
-                >
-                  <VideoIcon className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 mr-1 xs:mr-2 sm:mr-3" /> G-Meet
-                </Button>
-              </Link>
-              <Link href="https://meet.jit.si/TelanganaChessAcademy" target="_blank" className="cursor-pointer w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-[#2B6CB0] text-[#2B6CB0] hover:bg-[#2B6CB0] hover:text-white font-bold px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 md:py-4 rounded-full shadow-md text-sm xs:text-base sm:text-lg md:text-xl transition-all duration-300 w-full"
-                >
-                  <Play className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 mr-1 xs:mr-2 sm:mr-3" /> Start Call
-                </Button>
-              </Link>
-              <Link href="https://meet.google.com/atu-ziid-ojg" target="_blank" className="cursor-pointer w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-[#FF69B4] text-[#FF69B4] hover:bg-[#FF69B4] hover:text-white font-bold px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 md:py-4 rounded-full shadow-md text-sm xs:text-base sm:text-lg md:text-xl transition-all duration-300 w-full"
-                >
-                  <Sparkles className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 mr-1 xs:mr-2 sm:mr-3" /> TCS Meeting
-                </Button>
-              </Link>
-              <Link href="https://meet.google.com/uux-vyxa-pgq" target="_blank" className="cursor-pointer w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-[#06402B] text-[#06402B] hover:bg-[#90EE90] hover:text-white font-bold px-4 xs:px-5 sm:px-6 md:px-8 py-2 xs:py-2.5 sm:py-3 md:py-4 rounded-full shadow-md text-sm xs:text-base sm:text-lg md:text-xl transition-all duration-300 w-full"
-                >
-                  <BellIcon className="w-4 xs:w-5 sm:w-6 h-4 xs:h-5 sm:h-6 mr-1 xs:mr-2 sm:mr-3" /> BCA Meeting
-                </Button>
-              </Link>
-            </div>
 
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 xs:gap-4 sm:gap-6 justify-center lg:justify-start">
               <div className="flex items-center space-x-2 xs:space-x-3 bg-white px-2 xs:px-3 sm:px-4 py-1.5 xs:py-2 sm:py-3 rounded-full shadow-md hover:shadow-lg border border-[#E2E8F0]">
@@ -146,7 +181,7 @@ export function HeroSection() {
             <div className="relative z-10">
               <div className="w-[16rem] xs:w-[18rem] sm:w-[20rem] md:w-[24rem] lg:w-[26rem] xl:w-[28rem] h-[16rem] xs:h-[18rem] sm:h-[20rem] md:h-[24rem] lg:h-[26rem] xl:h-[28rem] bg-white rounded-2xl shadow-xl p-3 xs:p-4 sm:p-5 md:p-6 border-4 border-[#E2E8F0] hover:shadow-2xl transition-all duration-300">
                 <div className="grid grid-cols-8 gap-px h-full rounded-xl overflow-hidden">
-                  {Array.from({ length: 64 }, (_, i) => {
+                  {initialChessBoard.flat().map((piece, i) => {
                     const row = Math.floor(i / 8);
                     const col = i % 8;
                     const isLight = (row + col) % 2 === 0;
@@ -156,14 +191,7 @@ export function HeroSection() {
                         className="aspect-square flex items-center justify-center text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl font-bold transition-all duration-200 hover:scale-105 cursor-pointer"
                         style={{ backgroundColor: isLight ? "#FFFFFF" : "#000000", color: isLight ? "#000000" : "#FFFFFF" }}
                       >
-                        <span>
-                          {i === 0 && "♜"}
-                          {i === 7 && "♜"}
-                          {i === 56 && "♖"}
-                          {i === 63 && "♖"}
-                          {i === 28 && "♔"}
-                          {i === 35 && "♕"}
-                        </span>
+                        <span>{piece}</span>
                       </div>
                     );
                   })}
