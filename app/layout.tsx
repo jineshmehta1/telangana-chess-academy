@@ -27,6 +27,20 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Bharat Chess Academy",
+          "url": "https://bharatchessacademy.com",
+          "sameAs": [
+            "https://thegeniuschessacademy.com"
+          ]
+        }
+        `}
+        </script>
+        <meta name="relatedAcademy" content="https://thegeniuschessacademy.com" />
       </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Header />
